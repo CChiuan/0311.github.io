@@ -1,0 +1,404 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+
+html,body {
+    -webkit-user-drag: none;
+    overflow-x: hidden;
+    background-color: rgb(20, 20, 20);
+    user-select: none;
+    overscroll-behavior: none;
+}
+p {
+  font-family: 'Noto Sans TC';
+}
+
+.main {
+  width: 100%;
+  position: relative;
+}
+.main .header{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: block;
+}
+.kv {
+  width: 100%;
+  height: 100vh;
+  background: #242424 ;
+  background-size: cover;
+  position: relative;
+}
+.kv span {
+  position: fixed;
+}
+.kv::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  mix-blend-mode: multiply;
+  animation: videoInOut 11.8s infinite;
+}
+.kv video {
+  width: 100%;
+  height: 130%;
+  position: fixed;
+  top: -15vh;
+}
+.kv::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.kv span {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url(../img/pattern.jpg);
+  mix-blend-mode: soft-light;
+  opacity: .32;
+  top: 0;
+  left: 0;
+}
+.logobox {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 48vw;
+  height: 100vh;
+  margin: 0 26vw;
+}
+.logobox #title {
+  position: absolute;
+  left: 2vw;
+  width: 10vw;
+}
+.logobox #name {
+  position: absolute;
+  top: 3vh;
+  left: 12vw;
+  width: 28vw;
+}
+.logobox #role {
+  position: absolute;
+  top: 0vh;
+  right: -26vw;
+  width: 100vw;
+}
+.logobox #role img {
+  animation: role 3s ease-in-out infinite;
+}
+.logobox #namebar {
+  position: absolute;
+  top: 18vh;
+  left: 5vw;
+  width: 3.2vw;
+}
+.logobox #slg {
+  position: absolute;
+  width: 44vw;
+  top: 54vh;
+  left: 1.6vw;
+}
+.logobox #btn {
+  position: relative;
+  width: 19vw;
+  margin: 0 auto;
+  top: 73vh;
+  z-index: 99;
+  transform: scale(1);
+}
+.logobox #btn a:hover{
+  filter: drop-shadow(0 0 36px rgba(255, 250, 235,0.8)) brightness(1.1);
+  transform: scale(0.96);
+}
+#btn a {
+  display: block;
+  transition: all 0.3s;
+}
+.r_light2 {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  mask: url(../img/btn.png) center top no-repeat;
+  mask-size: 100% auto;
+  mix-blend-mode: plus-lighter;
+  opacity: .6;
+}
+.r_light2 span {
+  position: absolute;
+  width: 100%;
+  height: 15vh;
+  background: linear-gradient(135deg, rgba(255,255,255,0) 19%, rgba(255,255,255,1) 47%, rgba(255,255,255,1) 49%, rgba(255,255,255,0) 80%);
+  background-clip: padding-box;
+  opacity: 0.3;
+  z-index: 2;
+  pointer-events: none;
+  animation: r_light 1.2s ease infinite;
+  animation-delay: 2s;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(175, 67, 92, 0) 88%, rgba(175, 67, 92, 0.78) 100%);
+  top: 0;
+  left: 0;
+  z-index: 3;
+  user-select: none;
+  pointer-events: none;
+}
+
+
+/* ========== footer 開始 ========== */
+
+footer {
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  background: #141414;
+  user-select: none;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 60%;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0vh 0 2vh 0;
+}
+
+.footer-content .com {
+  width: 32%;
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+}
+
+.logo {
+  width: 35%;
+  margin-top: 0.2vh;
+}
+
+.com p {
+  font-family: 'Noto Sans TC';
+  font-size: 0.9vh;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.age {
+  display: flex;
+  margin-top: 2vh;
+}
+
+.icon-age {
+  width: 1.4vw;
+  margin-right: 0.8vw;
+}
+
+.age .text {
+  font-family: 'Noto Sans TC';
+  font-size: 0.9vh;
+  letter-spacing: 0.7px;
+}
+
+.age .text li {
+  list-style: "•";
+}
+
+/* ========== footer 結束 ========== */
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+
+  
+    .kv video {
+      width: auto;
+      height: 100vh;
+      top: 0;
+      left: -86%;
+    }
+    .main .header {
+      height: 100vh;
+    }
+    .header::after {
+      content: "";
+      background: linear-gradient(to bottom, rgba(175, 67, 92, 0) 88%, rgba(175, 67, 92, 0.78) 98%);
+    }    
+    .logobox {
+      width: 96vw;
+      margin: 0 2vw;
+    }
+    .logobox #name {
+      left: 26vw;
+      width: 65vw;
+    }
+    .logobox #title {
+      width: 24vw;
+    }
+    .logobox #role {
+      right: -68vw;
+      width: 230vw;
+      mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    }
+    .logobox #namebar {
+      top: 17vh;
+      left: 9vw;
+      width: 7vw;
+    }
+    .logobox #slg {
+      display: block;
+      width: 94vw;
+      top: 58vh;
+      left: 0;
+    }
+    .logobox #btn {
+      width: 48%;
+      top: 74vh;
+    }
+
+    .footer-content {
+      flex-wrap: wrap;
+      width: 90%;
+      padding: 2vh 0;
+    }
+    .footer-content .com {
+      width: 40%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .logo {
+      width: 72%;
+    }
+    .age {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .icon-age {
+        width: 5vw;
+    }
+    .age .text {
+      width: 100%;
+      padding-top: 1vh;
+      padding-left: 2vw;
+    }
+
+    .com p {
+      text-align: center;
+    }
+    .com p, .age .text {
+        font-size: 1vh;
+    }
+
+}
+
+
+
+@media screen and (max-width: 767px) { 
+
+  .kv video {
+    width: auto;
+    height: 100vh;
+    top: 0;
+    left: -154%;
+  }
+  .main .header {
+    height: 100vh;
+    position: sticky;
+  }
+  .header::after {
+    content: "";
+    background: linear-gradient(to bottom, rgba(175, 67, 92, 0) 88%, rgba(175, 67, 92, 0.78) 98%);
+  }    
+  .logobox {
+    width: 98vw;
+    margin: 0 1vw;
+  }
+  .logobox #name {
+    top: 2vh;
+    left: 30vw;
+    width: 66vw;
+  }
+  .logobox #title {
+    width: 28vw;
+  }
+  .logobox #role {
+    top: 2vh;
+    right: -114vw;
+    width: 322vw;
+    mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+  }
+  .logobox #namebar {
+    top: 12vh;
+    left: 9vw;
+    width: 9.4vw;
+  }
+  .logobox #slg {
+    display: block;
+    width: 100vw;
+    top: 59vh;
+    left: -0.6vw;
+  }
+  .logobox #btn {
+    width: 62%;
+    top: 71vh;
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 2vh 0 2.4vh 0;
+  }
+  .footer-content .com {
+    width: 58%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .logo {
+    width: 70%;
+  }
+  .age {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .icon-age {
+      width: 7.4vw;
+  }
+  .age .text {
+    width: 100%;
+    padding-top: 1vh;
+    padding-left: 2vw;
+  }
+
+  .com p {
+    text-align: center;
+  }
+  .com p, .age .text {
+      font-size: 1.2vh;
+  }
+
+}
